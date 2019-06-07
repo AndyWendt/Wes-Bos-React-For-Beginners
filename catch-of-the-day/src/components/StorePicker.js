@@ -2,14 +2,14 @@ import React from 'react';
 import {getFunName} from "../helpers";
 
 class StorePicker extends React.Component {
-    handleClick() {
+    goToStore() {
         alert("heyyyy!!!");
     }
+
     render() {
         return (
-          <form className="store-selector">
+          <form className="store-selector" onSubmit={this.goToStore}>
               <h2>Please Enter A Store</h2>
-              <button onClick={this.handleClick}>Click me!</button>
               <input
                   type="text"
                   required
