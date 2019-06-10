@@ -4,7 +4,6 @@ class AddFishForm extends React.Component {
     render() {
         return (
              <form className="fish-edit">
-                 <p>It works</p>
                <input name="name" type="text" placeholder="name" />
                <input name="price" type="text" placeholder="price" />
                <select name="status">
@@ -13,7 +12,7 @@ class AddFishForm extends React.Component {
                </select>
                <textarea name="desc" placeholder="desc" />
                <input name="image" type="text" placeholder="image" />
-               <button type="submit">Submit</button>
+               <button type="submit">+ Add Fish</button>
              </form>
         );
     }
