@@ -4,7 +4,7 @@ class Fish extends React.Component {
     render() {
         return (
             <li className="menu-fish">
-                <img src="" alt=""/>
+                <img src={this.props.details.image} alt={this.props.details.name} />
             </li>
         );
     }
