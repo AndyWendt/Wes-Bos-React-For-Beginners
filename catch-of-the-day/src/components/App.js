@@ -4,12 +4,20 @@ import Order from './Order'
 import Inventory from './Inventory'
 import sampleFishes from '../sample-fishes';
 import Fish from './Fish';
+import { base } from '../base';
 
 class App extends React.Component {
   state = {
     fishes: {},
     order: {}
   };
+
+  componentDidMount() {
+    this.ref = base.syncState(`${this.props.match.params.storeId}/fishes`, {
+      context: this,
+      state: 'fishes',
+    })
+  }
 
   addFish = fish => {
     const fishes = { ...this.state.fishes };
