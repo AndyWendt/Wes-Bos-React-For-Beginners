@@ -19,6 +19,11 @@ class App extends React.Component {
     })
   }
 
+  componentWillUnmount() {
+    // the reason why this.ref was stored was so that it could be removed easily
+    base.removeBinding(this.ref);
+  }
+
   addFish = fish => {
     const fishes = { ...this.state.fishes };
     fishes[`fish${Date.now()}`] = fish;
