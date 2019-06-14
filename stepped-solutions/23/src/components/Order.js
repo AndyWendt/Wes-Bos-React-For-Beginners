@@ -47,6 +47,7 @@ class Order extends React.Component {
       </CSSTransition>
     );
   };
+
   render() {
     const orderIds = Object.keys(this.props.order);
     const total = orderIds.reduce((prevTotal, key) => {
